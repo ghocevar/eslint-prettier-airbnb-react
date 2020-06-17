@@ -9,7 +9,7 @@
 2. Run this command inside your app's root directory. Note: this command executes the `eslint-prettier-config.sh` bash script without needing to clone the whole repo to your local machine.
 
    ```bash
-   exec 3<&1;bash <&3 <(curl https://raw.githubusercontent.com/paulolramos/eslint-prettier-airbnb-react/master/eslint-prettier-config.sh 2> /dev/null)
+   exec 3<&1;bash <&3 <(curl https://raw.githubusercontent.com/ghocevar/eslint-prettier-airbnb-react/master/eslint-prettier-config.sh 2> /dev/null)
    ```
 
 3. Make selections for your preference of package manager (npm or yarn), file format (.js or .json), max-line size, and trailing commas (none, es5, all).
@@ -69,22 +69,8 @@ Once files are created, you may edit to your liking.
     "node": true
   },
   "rules": {
-    "jsx-a11y/href-no-hash": ["off"],
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
-    "max-len": [
-      "warn",
-      {
-        "code": (SET BY USER),
-        "tabWidth": 2,
-        "comments": (SET BY USER),
-        "ignoreComments": false,
-        "ignoreTrailingComments": true,
-        "ignoreUrls": true,
-        "ignoreStrings": true,
-        "ignoreTemplateLiterals": true,
-        "ignoreRegExpLiterals": true
-      }
-    ]
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }]
   }
 }
 ```
@@ -95,7 +81,7 @@ Once files are created, you may edit to your liking.
 
 ```
 {
-"printWidth": (SET BY USER),
+  "printWidth": (SET BY USER),
   "singleQuote": true,
   "trailingComma": (SET BY USER)
 }

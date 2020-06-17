@@ -133,23 +133,10 @@ else
     "jest": true,
     "node": true
   },
+  "parser": "babel-eslint",
   "rules": {
-    "jsx-a11y/href-no-hash": ["off"],
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
-    "max-len": [
-      "warn",
-      {
-        "code": '${max_len_val}',
-        "tabWidth": 2,
-        "comments": '${max_len_val}',
-        "ignoreComments": false,
-        "ignoreTrailingComments": true,
-        "ignoreUrls": true,
-        "ignoreStrings": true,
-        "ignoreTemplateLiterals": true,
-        "ignoreRegExpLiterals": true
-      }
-    ]
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }]
   }
 }' >> .eslintrc${config_extension}
 fi
