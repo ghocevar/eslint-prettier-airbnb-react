@@ -139,7 +139,7 @@ else
   "rules": {
     "prettier/prettier": "error",
     "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
-    "react/jsx-no-spreading": "off"
+    "react/jsx-props-no-spreading": "off"
   }
 }' >> .eslintrc${config_extension}
 fi
