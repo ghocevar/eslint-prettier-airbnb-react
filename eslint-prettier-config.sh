@@ -104,7 +104,7 @@ $pkg_cmd -D eslint prettier
 echo
 echo -e "2/5 ${YELLOW}Conforming to Airbnb's JavaScript Style Guide... ${NC}"
 echo
-$pkg_cmd -D eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react babel-eslint
+$pkg_cmd -D eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react eslint-plugin-react-hooks babel-eslint eslint-config-prettier eslint-plugin-prettier
 
 echo
 echo -e "3/5 ${LCYAN}Making ESlint and Prettier play nice with each other... ${NC}"
@@ -124,6 +124,7 @@ else
   "extends": [
     "airbnb",
     "plugin:prettier/recommended",
+    "prettier",
     "prettier/react"
   ],
   "env": {
@@ -134,9 +135,11 @@ else
     "node": true
   },
   "parser": "babel-eslint",
+  "plugins": ["react", "react-hooks", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-no-spreading": "off"
   }
 }' >> .eslintrc${config_extension}
 fi
