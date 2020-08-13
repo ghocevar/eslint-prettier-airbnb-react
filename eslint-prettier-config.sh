@@ -16,7 +16,7 @@ NC='\033[0m' # No Color
 # Package Manager Prompt
 echo
 echo "Which package manager are you using?"
-select package_command_choices in "npm" "Yarn" "Yarn_Workspaces"  "Cancel"; do
+select package_command_choices in "npm" "Yarn" "Yarn_Workspaces" "Cancel"; do
   case $package_command_choices in
     npm ) pkg_cmd='npm install'; break;;
     Yarn ) pkg_cmd='yarn add'; break;;
